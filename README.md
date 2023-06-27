@@ -36,3 +36,13 @@ Make sure you have the following software installed on your system:
 ```
 
 4. Access the project in your browser at http://localhost:3000.
+
+
+  ### Configs
+
+  - Eslint
+  - Prettier
+  - Stylelint
+  - Commit lint
+  - `lint-staged` config
+  - Pre-Commit and Commit-Message config (husky)
