@@ -19,6 +19,13 @@ Make sure you have the following software installed on your system:
 2. Install the project dependencies by running the following command:
 
 ```shell
-   npm start 
+   npm install 
 ```
-3. Access the frontend project in your browser at http://localhost:3000.
+
+3. start the project by running:
+
+```shell
+    npm start
+```
+
+4. Access the project in your browser at http://localhost:3000.
