@@ -1,5 +1,12 @@
 # TodoList App
 
+## Table of Contents
+- [Frontend Stack](#frontend-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+
+
 ## Frontend Stack
 - React
 - Tailwind CSS
