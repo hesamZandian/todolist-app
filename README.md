@@ -16,10 +16,9 @@ Make sure you have the following software installed on your system:
 ### Installation
 
 1. Clone the repository
-2. Navigate to the project directory:
-3. Install the project dependencies by running the following command:
+2. Install the project dependencies by running the following command:
 
 ```shell
    npm start 
 ```
-4. Access the frontend project in your browser at http://localhost:3000.
+3. Access the frontend project in your browser at http://localhost:3000.
