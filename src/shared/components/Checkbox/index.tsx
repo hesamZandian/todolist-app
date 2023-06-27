@@ -1,21 +1,18 @@
-import React from "react";
-import clsx from "clsx";
+import clsx from 'clsx';
 
-interface CheckboxProps {
-  className?: string;
-  checked?: boolean;
-  onChange?: () => void;
+interface CheckboxProperties {
+  className: string;
+  checked: boolean;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ className, checked, onChange }) => {
+function Checkbox({ className, checked }: CheckboxProperties) {
   return (
     <input
-      type="checkbox"
-      className={clsx(`form-checkbox`, className)}
-      onChange={onChange}
+      type='checkbox'
+      className={clsx('form-checkbox', className)}
       checked={checked}
     />
   );
-};
+}
 
 export default Checkbox;

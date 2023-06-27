@@ -1,27 +1,21 @@
-import React from "react";
-import Button from "shared/components/Button";
-import Checkbox from "shared/components/Checkbox";
+import Button from 'shared/components/button';
+import Checkbox from 'shared/components/checkbox';
 
-export interface TodoItemProps {
+export interface TodoItemProperties {
   title: string;
   completed: boolean;
-  onToggleTodo: () => void;
 }
 
-export const TodoItem: React.FC<TodoItemProps> = ({
-  title,
-  completed,
-  onToggleTodo,
-}) => {
+export function TodoItem({ title, completed }: TodoItemProperties) {
   return (
-    <li className="flex items-center justify-between py-4 px-6">
-      <div className="flex items-center">
-        <span className="flex-grow">{title}</span>
-        <Checkbox className="text-blue-500" onChange={onToggleTodo} />
+    <li className='flex items-center justify-between py-4 px-6' key={title}>
+      <div className='flex items-center justify-center'>
+        <Checkbox className='text-blue-500' checked={completed} />
+        <span className='flex-grow ml-2'>{title}</span>
       </div>
-      <div className="flex items-center space-x-2">
-        <Button className="text-red-500 hover:text-red-600">Delete</Button>
+      <div className='flex items-center space-x-2'>
+        <Button className='text-red-500 hover:text-red-600'>Delete</Button>
       </div>
     </li>
   );
-};
+}
