@@ -28,10 +28,7 @@
       "stylelint --fix",
       "prettier --write",
       "git add"
-    ],
-    "hooks": {
-    "pre-commit": "lint-staged"
-    }
+    ]
   },
   "husky": {
     "hooks": {
