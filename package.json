@@ -28,8 +28,11 @@
       "stylelint --fix",
       "prettier --write",
       "git add"
-    ]
-  },  
+    ],
+    "hooks": {
+    "pre-commit": "lint-staged"
+    }
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -37,6 +40,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "lint:fix": "eslint --fix src/**/*.{js,jsx}",
+    "pretty": "prettier --write \"src/**/*.{js,jsx,css,scss}\"",
+    "lint:style": "npx stylelint \"src/**/*.{css,scss}\" --allow-empty-input",
+    "build:styles": "npx tailwindcss -i ./src/styles/index.scss -o ./src/styles/index.min.css --minify",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
