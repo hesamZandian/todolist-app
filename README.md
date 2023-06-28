@@ -8,7 +8,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-
+- [Contributing](#contributing)
 
 ## Frontend Stack
 - React
