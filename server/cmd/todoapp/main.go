@@ -23,6 +23,7 @@ func main() {
 	apiRoutes.GET("/todos", handlers.GetTodos)
 	apiRoutes.POST("/todos", handlers.CreateTodo)
 	apiRoutes.POST("/delete-todo", handlers.DeleteTodo)
+	apiRoutes.POST("/update-todo", handlers.UpdateTodo)
 
 	routesErr := routes.Run(":8080")
 	if routesErr != nil {
