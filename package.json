@@ -32,7 +32,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "check-types"
     }
   },
   "scripts": {
@@ -43,7 +44,9 @@
     "build:styles": "npx tailwindcss -i ./src/styles/index.scss -o ./src/styles/index.min.css --minify",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "check-types": "tsc --noEmit"
+
   },
   "eslintConfig": {
     "extends": [
