@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - [Frontend Stack](#frontend-stack)
+- [Configs](#configs)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
