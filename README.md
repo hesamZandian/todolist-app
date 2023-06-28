@@ -16,9 +16,9 @@
 - JavaScript with TypeScript
 
 ## Backend Stack
-- [Golang](https://golang.org/)
-- [Gin](https://github.com/gin-gonic/gin)
-- [GORM](https://gorm.io/)
+- Golang
+- Gin
+- GORM
 
 
 ## Configs
