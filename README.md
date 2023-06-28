@@ -21,7 +21,7 @@
 - `lint-staged` config for running linting and formatting tasks on staged files
 - Pre-Commit and Commit-Message config using Husky for running tasks before committing code
 
-## Folder Structure
+## Frontend Folder Structure
 The TodoList App follows the feature-sliced folder structure design pattern, which is a modular and scalable approach to organizing code in React applications. This pattern encourages a clear separation of concerns and promotes reusability and maintainability.
 
 To learn more about the feature-sliced design pattern, you can visit the [official website](https://feature-sliced.design/) for detailed documentation and examples.
