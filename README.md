@@ -13,6 +13,12 @@
 - Tailwind CSS
 - JavaScript with TypeScript
 
+## Backend Stack
+- [Golang](https://golang.org/)
+- [Gin](https://github.com/gin-gonic/gin)
+- [GORM](https://gorm.io/)
+
+
 ## Configs
 - Eslint for JavaScript linting
 - Prettier for code formatting
@@ -33,7 +39,8 @@ To learn more about the feature-sliced design pattern, you can visit the [offici
 Make sure you have the following software installed on your system:
 - Node.js (version > 18.12)
 - Yarn (recommended) or npm (JavaScript package manager)
-
+- Golang
+- PostgreSQL 
 ### Installation
 
 1. Clone the repository
