@@ -11,7 +11,10 @@ import (
 
 func main() {
 	var db = config.ConnectDB()
-	db.AutoMigrate(&models.Todo{})
+	err := db.AutoMigrate(&models.Todo{})
+	if err != nil {
+		return
+	}
 
 	routes := gin.Default()
 
@@ -19,9 +22,10 @@ func main() {
 
 	apiRoutes.GET("/todos", handlers.GetTodos)
 	apiRoutes.POST("/todos", handlers.CreateTodo)
+	apiRoutes.POST("/delete-todo", handlers.DeleteTodo)
 
-	err := routes.Run(":8080")
-	if err != nil {
-		fmt.Println(err)
+	routesErr := routes.Run(":8080")
+	if routesErr != nil {
+		fmt.Println(routesErr.Error())
 	}
 }
