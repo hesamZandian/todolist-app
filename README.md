@@ -46,13 +46,36 @@ Make sure you have the following software installed on your system:
 ### Installation
 
 1. Clone the repository
-2. Install the project dependencies by running the following command:
+2. To run the backend server, please follow these steps:
 
+```shell
+cd todolist/server
+go mod init server
+go get -u github.com/gin-gonic/gin
+go get -u gorm.io/gorm
+```
+
+4. Configure the database connection string in the dsn variable found in the `config/database.go` file:
+
+```shell
+dsn := "host=localhost user={your_username} password={your_password} dbname={your_dbname} port=5432 sslmode=disable"
+```
+Replace `{your_username}`, `{your_password}`, and `{your_dbname}` with your actual PostgreSQL database credentials and database name.
+
+
+3. Start the backend application by running following command:
+```sh
+cd cmd/todoapp
+go run .
+```
+  the API can now be accessed at http://localhost:8080.  
+
+4. Install the frontend project dependencies by running the following command:
 ```shell
    npm install 
 ```
 
-3. start the project by running:
+5. start the project by running:
 
 ```shell
     npm start
