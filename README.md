@@ -55,7 +55,7 @@ go get -u github.com/gin-gonic/gin
 go get -u gorm.io/gorm
 ```
 
-4. Configure the database connection string in the dsn variable found in the `config/database.go` file:
+3. Configure the database connection string in the dsn variable found in the `config/database.go` file:
 
 ```shell
 dsn := "host=localhost user={your_username} password={your_password} dbname={your_dbname} port=5432 sslmode=disable"
@@ -63,25 +63,25 @@ dsn := "host=localhost user={your_username} password={your_password} dbname={you
 Replace `{your_username}`, `{your_password}`, and `{your_dbname}` with your actual PostgreSQL database credentials and database name.
 
 
-3. Start the backend application by running following command:
+4. Start the backend application by running following command:
 ```sh
 cd cmd/todoapp
 go run .
 ```
   the API can now be accessed at http://localhost:8080.  
 
-4. Install the frontend project dependencies by running the following command:
+5. Install the frontend project dependencies by running the following command:
 ```shell
    npm install 
 ```
 
-5. start the project by running:
+6. start the project by running:
 
 ```shell
     npm start
 ```
 
-4. Access the project in your browser at http://localhost:3000.
+7. Access the project in your browser at http://localhost:3000.
 
 
 ### Contributing
