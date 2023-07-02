@@ -3,13 +3,20 @@ import { TodoItem, TodoItemProperties } from 'components/todo-item';
 
 interface TodoListProperties {
   todos: Omit<TodoItemProperties, 'onToggleTodo'>[];
+  reload: () => void;
 }
 
-function TodoList({ todos }: TodoListProperties) {
+function TodoList({ todos, reload }: TodoListProperties) {
   return (
     <ul className='bg-white rounded-lg shadow divide-y divide-gray-200'>
-      {todos.map((todo) => (
-        <TodoItem title={todo.title} completed={todo.completed} key={todo.title} />
+      {todos?.map((todo) => (
+        <TodoItem
+          ID={todo.ID}
+          title={todo.title}
+          completed={todo.completed}
+          key={todo.title}
+          reload={reload}
+        />
       ))}
     </ul>
   );

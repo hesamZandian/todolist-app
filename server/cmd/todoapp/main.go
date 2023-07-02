@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"server/config"
 	"server/internal/handlers"
+	"server/middlewares"
 	"server/models"
 
 	"github.com/gin-gonic/gin"
@@ -17,6 +18,8 @@ func main() {
 	}
 
 	routes := gin.Default()
+
+	routes.Use(middlewares.CORSMiddleware())
 
 	apiRoutes := routes.Group("/api")
 

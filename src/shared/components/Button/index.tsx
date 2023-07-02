@@ -1,10 +1,11 @@
-import React, { ButtonHTMLAttributes } from 'react';
-
-const Button: React.FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
-  children,
-  ...rest
-}) => {
-  return <button {...rest}>{children}</button>;
-};
+import { ButtonHTMLAttributes } from 'react';
+/* eslint-disable react/jsx-props-no-spreading */
+function Button({ children, ...rest }: ButtonHTMLAttributes<HTMLButtonElement>) {
+  return (
+    <button {...rest} type='button'>
+      {children}
+    </button>
+  );
+}
 
 export default Button;

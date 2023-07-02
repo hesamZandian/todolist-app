@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { CancelTokenSource } from 'axios';
 import { isMobile } from 'react-device-detect';
 
 const getDeviceType = () => (isMobile ? 'mobile' : 'desktop');
@@ -14,6 +14,26 @@ const axiosInstance = axios.create({
     'Content-Type': 'application/json'
   }
 });
+
+let cancelTokenSource: CancelTokenSource;
+
+axiosInstance.interceptors.request.use(
+  (config) => {
+    // Cancel previous request (if any)
+    if (cancelTokenSource) {
+      cancelTokenSource.cancel('Duplicate request detected');
+    }
+
+    // Create a new cancel token for the current request
+    cancelTokenSource = axios.CancelToken.source();
+    config.cancelToken = cancelTokenSource.token;
+
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 const serviceGet = axiosInstance.get;
 const servicePost = axiosInstance.post;

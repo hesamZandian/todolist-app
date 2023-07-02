@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import { AxiosRequestConfig } from 'axios';
 import { serviceGet, servicePost } from './initialize';
 
 function handleResponse({

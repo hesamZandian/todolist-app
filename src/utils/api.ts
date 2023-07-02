@@ -4,8 +4,8 @@ import { REQUEST_TYPES } from 'constants/request-types';
 interface apiRequestProperties {
   url: string;
   type: GRequestMethod;
-  transformer: (data: any) => any;
-  inputTransformer: (data: any) => any;
+  transformer?: (data: any) => any;
+  inputTransformer?: (data: any) => any;
 }
 
 export function apiRequestObject({
@@ -37,7 +37,7 @@ export function apiRequestObject({
         }
 
         default: {
-          return new Promise<{ data: string }>((resolve, reject) => {
+          return new Promise<{ data: string }>((resolve) => {
             resolve({ data: 'test' });
           });
         }
