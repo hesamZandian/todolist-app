@@ -15,7 +15,7 @@ function TodoList({ todos, reload }: TodoListProperties) {
           title={todo.title}
           completed={todo.completed}
           key={todo.title}
-          CreatedAt={todo.CreatedAt}
+          UpdatedAt={todo.UpdatedAt}
           reload={reload}
         />
       ))}

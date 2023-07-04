@@ -14,14 +14,15 @@ function Modal({ isOpen, children, onClose }: ModalProperties) {
       className={clsx('fixed inset-0 flex items-center justify-center z-50', {
         hidden: !isOpen
       })}
+      id='modal-root'
     >
       <div
         className='modal-overlay fixed inset-0 bg-gray-800 opacity-75'
         onClick={onClose}
       />
-      <div className='modal-container bg-white w-1/3 p-6 rounded-lg'>{children}</div>
+      <div className='modal-container bg-white w-1/3 p-6 rounded-lg z-10'>{children}</div>
     </div>,
-    document.querySelector('modal-root')!
+    document.body
   );
 }
 

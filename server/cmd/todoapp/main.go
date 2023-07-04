@@ -22,7 +22,6 @@ func main() {
 	routes.Use(middlewares.CORSMiddleware())
 
 	apiRoutes := routes.Group("/api")
-
 	apiRoutes.GET("/todos", handlers.GetTodos)
 	apiRoutes.POST("/todos", handlers.CreateTodo)
 	apiRoutes.POST("/delete-todo", handlers.DeleteTodo)

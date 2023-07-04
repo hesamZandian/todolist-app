@@ -33,7 +33,7 @@ function EditTodo({ isEditModalOpen, todo, reload, onClose }: EditModalPropertie
   };
 
   return (
-    <Modal isOpen={isEditModalOpen} title='Edit Todo' onClose={onClose}>
+    <Modal isOpen={isEditModalOpen} onClose={onClose}>
       <input
         type='text'
         value={todoState.title}
@@ -46,7 +46,7 @@ function EditTodo({ isEditModalOpen, todo, reload, onClose }: EditModalPropertie
           id={`checkbox-${todo.ID}`}
           checked={todoState.completed}
           onChange={(event) => onChangeTodo({ completed: event.target.checked })}
-          className='mr-2'
+          className='ml-2'
         />
       </div>
       <div className='flex justify-end'>
