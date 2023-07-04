@@ -6,6 +6,7 @@ const getDeviceType = () => (isMobile ? 'mobile' : 'desktop');
 const axiosInstance = axios.create({
   timeout: 40_000,
   withCredentials: true,
+  baseURL: '/api',
   headers: {
     Accept: 'application/json',
     'X-Web-Optimize-Response': 1,
