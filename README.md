@@ -1,4 +1,6 @@
 # TodoList App
+The TodoList App is a simple CRUD application that allows you to manage your tasks effectively. With this app, you can create new todos, view existing ones, update their status, and delete them when they are no longer needed.
+
 
 ## Table of Contents
 - [Frontend Stack](#frontend-stack)
