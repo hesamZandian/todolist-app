@@ -1,6 +1,6 @@
-import { createProxyMiddleware } from 'http-proxy-middleware';
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
-export default function setupProxy(app) {
+module.exports = (app) => {
   app.use(
     '/api',
     createProxyMiddleware({
@@ -8,4 +8,4 @@ export default function setupProxy(app) {
       changeOrigin: true
     })
   );
-}
+};
