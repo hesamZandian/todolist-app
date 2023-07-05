@@ -50,8 +50,6 @@ Make sure you have the following software installed on your system:
 
 ## Installation
 
-To install and run the TodoList App, please follow these steps:
-
 ### Backend Setup
 
 1. Clone the repository.
